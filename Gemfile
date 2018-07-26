@@ -48,3 +48,5 @@ gem 'activesupport'
 gem 'json'
 gem "rest-client"
 gem 'jwt'
+gem 'dotenv-rails'
+gem 'active_model_serializers'
