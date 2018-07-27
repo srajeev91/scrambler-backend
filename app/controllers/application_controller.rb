@@ -15,8 +15,8 @@ class ApplicationController < ActionController::API
  def decoded_token
    begin
      JWT.decode authorization_token(), secret_key(), true, { algorithm: 'HS256' }
-   rescue
-     nil
+   rescue JWT::VerificationError, JWT::DecodeError
+     return nil
    end
  end
 
