@@ -25,4 +25,15 @@ class Api::V1::GamesController < ApplicationController
     render json: @game
   end
 
+  # def update
+  #   @game = Game.find_by(id: params[:id])
+  #
+  #   serialized_data = ActiveModelSerializers::Adapter::Json.new(
+  #       GameSerializer.new(@game)
+  #   ).serializable_hash
+  #
+  #   ActionCable.server.broadcast 'game_channel', content: serialized_data
+  #
+  # end
+
 end
