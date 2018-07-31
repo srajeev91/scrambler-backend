@@ -50,3 +50,4 @@ gem "rest-client"
 gem 'jwt'
 gem 'dotenv-rails'
 gem 'active_model_serializers'
+gem 'coffee-rails', '~> 4.1.0'
