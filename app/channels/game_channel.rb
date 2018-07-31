@@ -1,6 +1,9 @@
 class GameChannel < ApplicationCable::Channel
   def subscribed
     stream_from "game_channel"
+
+    # game = Game.find(params[:id])
+    # stream_for game
   end
 
   # def received(data)
