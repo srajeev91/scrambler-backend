@@ -10,7 +10,11 @@ class Api::V1::WordsController < ApplicationController
   end
 
   def show
+
     @word = Word.find(params[:id])
+
+    ActionCable.server.broadcast 'word_channel', {word: @word.word}
+
     render json: @word
   end
 
