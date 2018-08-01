@@ -5,7 +5,7 @@ Rails.application.routes.draw do
       resources :users, only: [:index, :show, :create]
       resources :words, only: [:index]
       resources :games, only: [:index, :create]
-      resources :user_games, only: [:update]
+      resources :user_games, only: [:index, :update, :create, :show]
 
       get "/highscores" => "user_games#highscores"
 

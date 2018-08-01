@@ -1,9 +1,19 @@
 class Api::V1::UserGamesController < ApplicationController
-  # def index
-  #   @usergames = UserGame.all
-  #
-  #   render json: @usergames
-  # end
+  def index
+    @usergames = UserGame.all
+
+    render json: @usergames
+  end
+
+  def create
+    game_id = params[:game_id]
+    user_id = params[:user_id]
+    score = params[:score]
+    date = params[:date]
+    @usergame = UserGame.create(user_id: user_id, game_id: game_id, score: score, date: date)
+
+    render json: @usergame
+  end
 
   def show
     @usergame = UserGame.find(params[:id])
