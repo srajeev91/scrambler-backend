@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'localhost:3002', 'localhost:5000', '192.168.6.192:3002'
+    origins 'localhost:3002', 'localhost:5000', '192.168.6.120:3002'
 
     # origins '*'
 
